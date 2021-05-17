@@ -15,10 +15,10 @@ export class TestClassComponent extends Component {
       clickedPositionY: 0,
     };
     this.unityContext = new UnityContext({
-      codeUrl: "/build/myunityapp.wasm",
-      frameworkUrl: "/build/myunityapp.framework.js",
-      dataUrl: "/build/myunityapp.data",
-      loaderUrl: "/build/myunityapp.loader.js",
+      codeUrl: "/build/demo1b.wasm",
+      frameworkUrl: "/build/demo1b.framework.js",
+      dataUrl: "/build/demo1b.data",
+      loaderUrl: "/build/demo1b.loader.js",
     });
     this.unityContext.on("RotationDidUpdate", (degrees) => {
       this.setState({ degrees: Math.round(degrees) });
@@ -83,8 +83,8 @@ export class TestClassComponent extends Component {
           {this.state.showUnity === true ? (
             <Unity
               style={{
-                width: "600px",
-                height: 400,
+                width: "100%",
+                height: '80vh',
                 border: "2px solid black",
                 background: "grey",
                 visibility: this.state.isLoaded ? "visible" : "hidden",
